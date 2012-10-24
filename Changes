@@ -1,5 +1,11 @@
 Revision history for Perl extension List-MoreUtils
 
+0.33_001 Tue Oct 23 2012
+        - *** UNAUTHORIZED RELEASE ***
+        - Fixed unwanted warning from pairwise when $a and $b are
+          "used only once. (RT#76749)
+        - Added t/04_pairwise_warn.t to verify the fix.
+
 0.33 Thu 4 Aug 2011
 	- Updated can_xs to fix a bug in it
 

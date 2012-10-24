@@ -7,8 +7,8 @@ use DynaLoader ();
 
 use vars qw{ $VERSION @ISA @EXPORT_OK %EXPORT_TAGS };
 BEGIN {
-    $VERSION   = '0.33';
-    # $VERSION   = eval $VERSION;
+    $VERSION   = '0.33_001';
+    $VERSION   = eval $VERSION;
     @ISA       = qw{ Exporter DynaLoader };
     @EXPORT_OK = qw{
         any all none notall true false
@@ -354,6 +354,13 @@ die $@ if $@;
 *last_value  = \&lastval;
 *zip         = \&mesh;
 *distinct    = \&uniq;
+
+# If pairwise is exported, let Perl "see" $a and $b in the caller's symbol table
+# so there won't be a "used only once" warning for those two symbols.
+if( eval{ caller(1)->can('pairwise'); 1; } ) {   # caller(1): eval adds a level.
+    no strict 'refs';
+    local ${ caller . '::a' }, ${ caller . '::b' }; # caller(0): importing pkg.
+}
 
 1;
 
