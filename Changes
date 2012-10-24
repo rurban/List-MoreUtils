@@ -1,5 +1,10 @@
 Revision history for Perl extension List-MoreUtils
 
+0.33_002 Wed Oct 24 2012
+        - *** UNAUTHORIZED RELEASE ***
+        - Changed two mentions in the POD of 'first_val' and 'last_val' to their
+          correct names: 'first_value' and 'last_value' (RT78527).
+
 0.33_001 Tue Oct 23 2012
         - *** UNAUTHORIZED RELEASE ***
         - Fixed unwanted warning from pairwise when $a and $b are

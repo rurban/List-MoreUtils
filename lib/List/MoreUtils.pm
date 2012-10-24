@@ -7,7 +7,7 @@ use DynaLoader ();
 
 use vars qw{ $VERSION @ISA @EXPORT_OK %EXPORT_TAGS };
 BEGIN {
-    $VERSION   = '0.33_001';
+    $VERSION   = '0.33_002';
     $VERSION   = eval $VERSION;
     @ISA       = qw{ Exporter DynaLoader };
     @EXPORT_OK = qw{
@@ -563,7 +563,7 @@ Returns the first element in LIST for which BLOCK evaluates to true. Each
 element of LIST is set to C<$_> in turn. Returns C<undef> if no such element
 has been found.
 
-C<first_val> is an alias for C<firstval>.
+C<first_value> is an alias for C<firstval>.
 
 =item lastval BLOCK LIST
 
@@ -573,7 +573,7 @@ Returns the last value in LIST for which BLOCK evaluates to true. Each element
 of LIST is set to C<$_> in turn. Returns C<undef> if no such element has been
 found.
 
-C<last_val> is an alias for C<lastval>.
+C<last_value> is an alias for C<lastval>.
 
 =item pairwise BLOCK ARRAY1 ARRAY2
 
