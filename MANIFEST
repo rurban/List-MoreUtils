@@ -17,3 +17,4 @@ xt/meta.t
 xt/pmv.t
 xt/pod.t
 META.yml                                 Module meta-data (added by MakeMaker)
+META.json

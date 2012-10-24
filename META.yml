@@ -21,4 +21,4 @@ no_index:
 requires:
   Test::More: 0.82
   perl: 5.00503
-version: 0.33_002
+version: 0.33_003
